@@ -1,0 +1,80 @@
+/* -----------------------------------------
+  =Default css to make the demo more pretty
+-------------------------------------------- */
+
+body {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: url("kaffe_klein.png") 46 64, auto;
+  }
+  
+
+  
+  /* -----------------------------------------
+    =CSS3 Loading animations
+  -------------------------------------------- */
+  
+  /* =Elements style
+  ---------------------- */
+
+  
+  .ring-2 {
+    position: relative;
+    width: 20em;
+    height: 20em;
+    margin: 0 auto;
+    /*border: 5em solid #4b9cdb;*/
+    border-radius: 100%;
+  }
+  
+  .ball-holder {
+    position: absolute;
+    width: 20em;
+    height: 15em;
+    content: url("./hirn.png");
+  }
+  
+  .ball {
+    position: relative;
+    top: 15em;
+    left: -2.5em;
+    width: 5em;
+    height: 5em;
+    border-radius: 100%;
+    background: inherit;
+    
+  }
+  
+  
+  /* =Animate the stuff
+  ------------------------ */
+  
+  .load-5 .ball-holder {
+    animation: loadingA 5s linear infinite;
+  }
+
+  .load-5 .ball {
+    animation: loadingB 5s linear infinite;
+  }
+  
+  @keyframes loadingA {
+    0 {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes loadingB {
+    0 {
+      transform: rotate(-0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
